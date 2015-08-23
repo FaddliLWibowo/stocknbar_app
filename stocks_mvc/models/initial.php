@@ -18,7 +18,7 @@ class Initial extends CI_Model {
 				redirect();
 			}
 		}
-		
+		//$this->output->enable_profiler(TRUE);
 /*
 		$user_type = $this->session->userdata('user_type');
 

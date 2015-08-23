@@ -130,5 +130,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="<?php echo static_url('3rdparty/shuffleLetters/js/jquery.shuffleLetters.js'); ?>"></script>
     <script src="<?php echo static_url('js/1st-landing-page.js'); ?>"></script>
-  </body>
+  </Body>
 </html>

@@ -26,7 +26,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 $config['cache_path'] = '';
 $config['encryption_key'] = 'lkl1ZXne0enW1OkUBVyKtqvW9pZXyp1T';
 
-$config['sess_cookie_name']		= 'studiwidie_key';
+$config['sess_cookie_name']		= 'snb_key';
 $config['sess_expiration']		= 7200;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;
