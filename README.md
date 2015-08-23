@@ -22,3 +22,4 @@ CMO : -
 [![Stories in Ready](https://badge.waffle.io/dhutapratama/stocknbar_app.svg?label=ready&title=Ready)](http://waffle.io/dhutapratama/stocknbar_app)  
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)  
 [![Badges](http://img.shields.io/:badges-7/7-ff6799.svg)](https://github.com/dhutapratama/stocknbar_app)  
+[![Throughput Graph](https://graphs.waffle.io/dhutapratama/stocknbar_app/throughput.svg)](https://waffle.io/dhutapratama/stocknbar_app/metrics)   
