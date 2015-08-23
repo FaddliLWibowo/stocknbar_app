@@ -4,7 +4,8 @@ class Error_page extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('error_page/404');
+		redirect();
+		//$this->load->view('error_page/404');
 	}
 }
 
