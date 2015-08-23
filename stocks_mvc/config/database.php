@@ -3,27 +3,21 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-switch ($_SERVER['HTTP_HOST']) {
-	case 'stocknbar.app':
-		$db['default']['hostname'] = 'localhost';
-		$db['default']['username'] = 'z';
-		$db['default']['password'] = 'z';
-		$db['default']['database'] = 'zadmin_stocknbar';
-		break;
-
-	case 'stocknbar.com':
-		$db['default']['hostname'] = 'localhost';
-		$db['default']['username'] = 'dhutapra_stocknb';
-		$db['default']['password'] = '48624862';
-		$db['default']['database'] = 'dhutapra_stocknbar';
-		break;
-
-	default:
-		$db['default']['hostname'] = 'localhost';
-		$db['default']['username'] = 'root';
-		$db['default']['password'] = '';
-		$db['default']['database'] = '';
-		break;
+if ($_SERVER['HTTP_HOST'] == 'stocknbar.app' OR $_SERVER['HTTP_HOST'] == 'www.stocknbar.app') {
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'z';
+	$db['default']['password'] = 'z';
+	$db['default']['database'] = 'zadmin_stocknbar';
+} elseif ($_SERVER['HTTP_HOST'] == 'stocknbar.com' OR $_SERVER['HTTP_HOST'] == 'www.stocknbar.com') {
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'dhutapra_stocknb';
+	$db['default']['password'] = '48624862';
+	$db['default']['database'] = 'dhutapra_stocknbar';
+} else {
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'root';
+	$db['default']['password'] = '';
+	$db['default']['database'] = '';
 }
 
 $db['default']['dbdriver'] = 'mysql';

@@ -1,23 +1,17 @@
 <?php
 
-switch ($_SERVER['HTTP_HOST']) {
-	case 'stocknbar.app':
-		define('ENVIRONMENT', 'development');
-		$system_path 		= '../../codeigniter_system';
-		$application_folder = 'stocks_mvc';
-		break;
-
-	case 'stocknbar.com':
-		define('ENVIRONMENT', 'production');
-		$system_path 		= '../code-igniter-system-223';
-		$application_folder = 'stocks_mvc';
-		break;
-
-	default:
-		define('ENVIRONMENT', 'production');
-		$system_path 		= 'system';
-		$application_folder = 'application';
-		break;
+if ($_SERVER['HTTP_HOST'] == 'stocknbar.app' OR $_SERVER['HTTP_HOST'] == 'www.stocknbar.app') {
+	define('ENVIRONMENT', 'development');
+	$system_path 		= '../../codeigniter_system';
+	$application_folder = 'stocks_mvc';
+} elseif ($_SERVER['HTTP_HOST'] == 'stocknbar.com' OR $_SERVER['HTTP_HOST'] == 'www.stocknbar.com') {
+	define('ENVIRONMENT', 'production');
+	$system_path 		= '../code-igniter-system-223';
+	$application_folder = 'stocks_mvc';
+} else {
+	define('ENVIRONMENT', 'production');
+	$system_path 		= 'system';
+	$application_folder = 'application';
 }
 
 if (defined('ENVIRONMENT'))
@@ -51,7 +45,6 @@ if (defined('ENVIRONMENT'))
 
 	// ensure there's a trailing slash
 	$system_path = rtrim($system_path, '/').'/';
-
 	// Is the system path correct?
 	if ( ! is_dir($system_path))
 	{

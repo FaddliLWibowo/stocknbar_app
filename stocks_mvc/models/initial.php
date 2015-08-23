@@ -9,6 +9,17 @@ class Initial extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 
+		if ($_SERVER['HTTP_HOST'] == 'stocknbar.com' OR $_SERVER['HTTP_HOST'] == 'www.stocknbar.com') {
+			if (isset($_SERVER['HTTPS']) OR $_SERVER['HTTP_HOST'] != 'stocknbar.com') {
+				redirect();
+			}
+		} else {
+			if ($_SERVER['HTTP_HOST'] != 'stocknbar.app') {
+				redirect();
+			}
+		}
+		
+/*
 		$user_type = $this->session->userdata('user_type');
 
 		if ($this->uri->segment(1) != $user_type) {
@@ -61,7 +72,7 @@ class Initial extends CI_Model {
 						}
 				break;
 			}
-		}
+		} */
 	}
 
 	public function login($data = array('username' => '', 'password' => '')) {
@@ -76,11 +87,5 @@ class Initial extends CI_Model {
 			redirect($user_type);
 		}
 
-	}
-
-	public function database_testing() {
-		return $this->db->select('*')
-			->from('startups')
-			->get()->result();
 	}
 }

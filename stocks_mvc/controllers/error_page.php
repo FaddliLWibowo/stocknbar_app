@@ -1,11 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Error_page extends CI_Controller {
 
 	public function index()
 	{
-		$this->initial->database_testing();
-		$this->load->view('welcome_message');
+		$this->load->view('error_page/404');
 	}
 }
 
