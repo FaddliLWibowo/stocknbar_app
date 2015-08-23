@@ -121,7 +121,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
-          <p class="snb-footer text-center">stocknbar beta tidak melakukan pendaftaran terbuka, pendaftaran web beta menggunakan invitation code<br>Stock N' Bar - 1st launch 23 Agust 2015</p>
+          <p class="snb-footer text-center">stocknbar beta tidak melakukan pendaftaran terbuka, pendaftaran web beta menggunakan invitation code<br>Stock N' Bar - 1st launch 23 Agust 2015 - partner@stocknbar.com</p>
 
         </div>
       </div>
